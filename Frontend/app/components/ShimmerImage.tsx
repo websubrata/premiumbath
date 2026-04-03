@@ -3,7 +3,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { ImageProps } from "next/image";
-import { BASE_URL } from "@/constant";
 
 interface IProps extends ImageProps {
   imageClass?: string;
@@ -32,7 +31,7 @@ function ShimmerImage(props: IProps) {
         onLoad={handleLoadingComplete}
         onError={handleError}
         {...props}
-        src={error ? `${BASE_URL}/no_image.png` : props.src}
+        src={error ? "/no_image.png" : props.src}
         className={`${
           isLoaded ? "opacity-1" : "opacity-0"
         } transition-all duration-500 ${props.imageClass}`}

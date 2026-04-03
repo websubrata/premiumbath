@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
 import { setMobileMenuVisibility } from "../redux/slices/mobileMenu";
 import { RootState } from "../redux/store";
-import { BASE_URL } from "@/constant";
 import { FaPhone } from "react-icons/fa6";
 import { MdOutlineCall } from "react-icons/md";
 
@@ -41,7 +40,7 @@ function MobileNav() {
             </li>
             <li className={NAV_ITEM_CSS}>
               <Link
-                href={BASE_URL + "/Kohler-Retail-Book-2022.pdf"}
+                href="/Kohler-Retail-Book-2022.pdf"
                 target="_blank"
               >
                 Download Catalogue

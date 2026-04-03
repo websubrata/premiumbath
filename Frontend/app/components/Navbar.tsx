@@ -10,7 +10,6 @@ import { FaPhone } from "react-icons/fa6";
 import Link from "next/link";
 import NavDropDownItem from "./NavDropDownItem";
 import LOGO from "@/public/Premium-Bathware.svg";
-import { BASE_URL } from "@/constant";
 import SearchField from "./Navbar/SearchField";
 import { MdOutlineCall } from "react-icons/md";
 
@@ -70,7 +69,7 @@ function Navbar() {
             </li>
             <li className={NAV_ITEM_CSS}>
               <Link
-                href={BASE_URL + "/Kohler-Retail-Book-2022.pdf"}
+                href="/Kohler-Retail-Book-2022.pdf"
                 target="_blank"
               >
                 Download Catalogue

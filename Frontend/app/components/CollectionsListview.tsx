@@ -1,6 +1,5 @@
 import React from "react";
 import CollectionsList from "./CollectionsList";
-import { BASE_URL } from "@/constant";
 import ProductsCatList from "./overview/ProductsCatList";
 import Link from "next/link";
 import IntersectionObserverComponent from "./IntersectionObserverComponent";
@@ -9,7 +8,7 @@ function CollectionsListview() {
   const homeCarasulDatas = [
     {
       id: "1",
-      img: BASE_URL + "/emphasis/design.jpg",
+      img: "/emphasis/design.jpg",
       title: "Design",
       subtitle:
         "We craft innovative designs for premium bathroom products, pushing the boundaries with creativity and functionality.",
@@ -19,7 +18,7 @@ function CollectionsListview() {
 
     {
       id: "2",
-      img: BASE_URL + "/emphasis/sustanibility.jpg",
+      img: "/emphasis/sustanibility.jpg",
       title: "Sustainability",
       subtitle:
         "We craft premium bathroom products with sustainability at the core, ensuring eco-friendly luxury for discerning consumers.",
@@ -28,7 +27,7 @@ function CollectionsListview() {
     },
     {
       id: "3",
-      img: BASE_URL + "/emphasis/confort.jpg",
+      img: "/emphasis/confort.jpg",
       title: "Comfort",
       subtitle:
         "Indulge in unrivaled comfort with our premium bathroom products, elevating your daily routine to a luxurious experience.",
@@ -37,7 +36,7 @@ function CollectionsListview() {
     },
     {
       id: "4",
-      img: BASE_URL + "/emphasis/functionality.jpg",
+      img: "/emphasis/functionality.jpg",
       title: "Functionality",
       subtitle:
         "We elevate everyday experiences through cutting-edge functionality in top-tier bathroom products, tailored to your needs.",
@@ -89,10 +88,10 @@ function CollectionsListview() {
             >
               <ul>
                 <CollectionsList
-                  link={`${BASE_URL}/basin-area/basin`}
+                  link="/basin-area/basin"
                   text="BASIN PRODUCTS"
                   subText="Indulge in luxury with our fancy basin products. Elevate your bathroom and shop now for opulent style and sophistication!"
-                  imageUrl={BASE_URL + "/basins/basin.jpg"}
+                  imageUrl="/basins/basin.jpg"
                 />
               </ul>
             </IntersectionObserverComponent>
@@ -106,10 +105,10 @@ function CollectionsListview() {
             >
               <ul>
                 <CollectionsList
-                  link={`${BASE_URL}/toilet-area/toilets`}
+                  link="/toilet-area/toilets"
                   text="TOILET PRODUCTS"
                   subText="Upgrade your bathroom experience with our premium toilet products, ensuring ultimate comfort and cleanliness. Shop now for luxury and convenience!"
-                  imageUrl={BASE_URL + "/toilet/image0_0.jpg"}
+                  imageUrl="/toilet/image0_0.jpg"
                 />
               </ul>
             </IntersectionObserverComponent>
@@ -122,10 +121,10 @@ function CollectionsListview() {
             >
               <ul>
                 <CollectionsList
-                  link={`${BASE_URL}/kitchen-area/kitchen-faucet`}
+                  link="/kitchen-area/kitchen-faucet"
                   text="KITCHEN PRODUCTS"
                   subText="Upgrade your kitchen with premium faucets for style and functionality. Elevate your space today."
-                  imageUrl={BASE_URL + "/kitchen/image0_0.jpg"}
+                  imageUrl="/kitchen/image0_0.jpg"
                 />
               </ul>
             </IntersectionObserverComponent>
