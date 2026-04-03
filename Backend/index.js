@@ -14,6 +14,14 @@ app.use(express.json());
 app.use("/products", productsRouter);
 app.use("/contact", contactRouter);
 
+app.get("/", (req, res) => {
+  res.status(200).json({
+    name: "Premium Bathware API",
+    ok: true,
+    try: ["/test", "/products/?catname=basin&page=1"],
+  });
+});
+
 app.get("/store", (req, res) => {
   datas.push(req.query.data);
 
