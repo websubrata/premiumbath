@@ -71,10 +71,10 @@ function CollectionsListview() {
             >
               <ul>
                 <CollectionsList
-                  link={`${BASE_URL}/new-launches/new-launches`}
+                  link="/new-launches/new-launches"
                   text="NEW LAUNCHES"
                   subText="Discover innovative bathroom products: sleek faucets, luxurious showerheads, eco-friendly toilets, and stylish bathroom solutions in our latest launches."
-                  imageUrl={BASE_URL + "/newlaunches/image0_0.jpg"}
+                  imageUrl="/newlaunches/image0_0.jpg"
                 />
               </ul>
             </IntersectionObserverComponent>
