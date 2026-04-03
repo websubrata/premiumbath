@@ -3,8 +3,8 @@ const dotenv = require("dotenv");
 const productsRouter = require("./router/products.router");
 const contactRouter = require("./router/contact.router");
 const cors = require("cors");
-const { query } = require("./database/db");
 const ApiResponse = require("./utils/ApiResponse");
+const { getProductPage } = require("./services/catalogService");
 const app = express();
 
 dotenv.config();
@@ -22,12 +22,17 @@ app.get("/store", (req, res) => {
 
 app.get("/test", async (req, res) => {
   try {
-    const data = await query("SELECT * FROM basin");
-    res.json(data);
+    const { products, pages } = await getProductPage("basin", 1);
+    res.json({ products, pages });
   } catch (error) {
     res.status(400).json(new ApiResponse(400, error.message, error));
   }
 });
 
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => console.log("http://localhost:" + PORT));
+
+if (require.main === module) {
+  app.listen(PORT, () => console.log("http://localhost:" + PORT));
+}
+
+module.exports = app;

@@ -89,6 +89,12 @@ const metadatas = [
       "Transform your bathroom with modern body spray showers from Premium Bathware in Kolkata. Explore our collection and get a quote today for a refreshment!",
   },
   {
+    key: "bath-spouts",
+    title: "Explore Bath Spouts in Kolkata | Premium Bathware",
+    description:
+      "Discover wall-mount and deck-mount bath spouts and fillers in Kolkata at Premium Bathware. Get a quote today!",
+  },
+  {
     key: "steam",
     title: "Explore All Bathroom Steams in Kolkata | Premium Bathware",
     description:
